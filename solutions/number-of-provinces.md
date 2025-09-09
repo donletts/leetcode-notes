@@ -1,4 +1,4 @@
-# [One Week Study Guide](../one-week-intervew-study-guide.md)
+# [One Week Study Guide](../readme.md)
 
 ## 547. Number of Provinces
 

@@ -1,4 +1,4 @@
-# [One Week Study Guide](../one-week-intervew-study-guide.md)
+# [One Week Study Guide](../readme.md)
 
 ## 323. Number of Connected Components in an Undirected Graph
 
