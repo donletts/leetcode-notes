@@ -11,14 +11,14 @@ Return the number of connected components in the graph.
 
 ### Example 1
 
-![connected graph](conn1-graph.jpg)
+![connected graph](images/conn1-graph.jpg)
 
 **Input:** n = 5, edges = [[0,1],[1,2],[3,4]]  
 **Output:** 2
 
 ### Example 2
 
-![connected graph](conn2-graph.jpg)
+![connected graph](images/conn2-graph.jpg)
 
 **Input:** n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]  
 **Output:** 1

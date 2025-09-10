@@ -2,7 +2,6 @@
 
 ## 547. Number of Provinces
 
-```txt
 Solved
 Medium
 
@@ -14,31 +13,28 @@ You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith
 
 Return the total number of provinces.
 
+### Example 1
 
+![example 1](images/number-of-provinces-1.jpg)
 
-Example 1:
-![example 1](./number-of-provinces-1.png)
+**Input**: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+**Output**: 2
 
+### Example 2
 
-Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
-Output: 2
-Example 2:
-![example 1](./number-of-provinces-1.png)
+![example 1](images/number-of-provinces-1.jpg)
 
+**Input**: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+**Output**: 3
 
-Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
-Output: 3
+**Constraints**:
 
-
-Constraints:
-
-1 <= n <= 200
-n == isConnected.length
-n == isConnected[i].length
-isConnected[i][j] is 1 or 0.
-isConnected[i][i] == 1
-isConnected[i][j] == isConnected[j][i]
-```
+- 1 <= n <= 200
+- n == isConnected.length
+- n == isConnected[i].length
+- isConnected[i][j] is 1 or 0.
+- isConnected[i][i] == 1
+- isConnected[i][j] == isConnected[j][i]
 
 ### Solution
 

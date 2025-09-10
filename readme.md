@@ -3,6 +3,22 @@
 Absolutely — with less than a week and your current progress through the LeetCode Crash Course, the smartest move is to go deep, not wide. You want to master the patterns you've already touched so you can execute confidently under pressure.
 Here’s your pared-down Algorithm Mastery Tracker, focused only on the topics you’ve already studied:
 
+## [General Notes](general-notes.md)
+
+Using this for general algorithm descriptions
+
+- [prefix_sum](general-notes.md#prefix-sum)
+- [trees](general-notes.md#trees)
+  - [dfs](general-notes.md#depth-first-search)
+  - [bfs](general-notes.md#breath-first-search)
+  - [binary search](general-notes.md#binary-search)
+- [graphs](general-notes.md#binary-search)
+  - [array of edges](general-notes.md#first-input-format-array-of-edges-see-number-of-connected-components)
+  - [adjacency list](general-notes.md#second-input-format-adjacency-list)
+  - [adjacency matrix](general-notes.md#third-input-format-adjacency-matrix-see-number-of-provinces)
+  - [matrix](general-notes.md#last-input-format-matrix-see-number-of-islands)
+  - [code between graphs and trees](general-notes.md#code-differences-between-graphs-and-trees)
+
 ## 🔢 Arrays & Strings
 
 | Done | Pattern             | Practice                                                                                                                                     | Notes                                                                                         |
@@ -10,7 +26,7 @@ Here’s your pared-down Algorithm Mastery Tracker, focused only on the topics y
 | ✅   | Two Pointers        | [LeetCode 283 – Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                     | [In-place manipulation](solutions/move-zeros.md)                                              |
 | ✅   | Sliding Window      | [LeetCode 3 – Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Track sliding window with dict](solutions/longest-substring-without-repeating-characters.md) |
 | ✅   | Prefix Sum          | [LeetCode 560 – Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                 | [Use hashmap for cumulative sums](solutions/subarray-sum-equals-k.md)                         |
-| ⬜   | Prefix Sum          | [LeetCode 525 – Contiguous Array](https://leetcode.com/problems/contiguous-array/)                                                           | Track running count of 0s and 1s → prefix sum trick                                           |
+| ✅   | Prefix Sum          | [LeetCode 525 – Contiguous Array](https://leetcode.com/problems/contiguous-array/)                                                           | [Track running count of 0s and 1s → prefix sum trick](solutions/contiguous-array.md)          |
 | ⬜   | Prefix Sum + Modulo | [LeetCode 974 – Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)                                   | Use hashmap to count prefix_sum % k                                                           |
 | ⬜   | Prefix Sum + Index  | [LeetCode 325 – Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)                       | Store earliest index of each prefix sum                                                       |
 | ⬜   | Prefix Sum + Binary | [LeetCode 930 – Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/)                                         | Count subarrays with sum = goal using hashmap                                                 |
@@ -52,13 +68,15 @@ Here’s your pared-down Algorithm Mastery Tracker, focused only on the topics y
 
 ## 🧭 Graphs (Just Starting)
 
-| Done | Pattern                  | Practice                                                                                                                                                                | Notes                                                                 |
-| :--- | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------- |
-| ✅   | BFS on Grid              | [LeetCode 200 – Number of Islands](https://leetcode.com/problems/number-of-islands/)                                                                                    | [Use visited set + queue](solutions/number-of-islands.md)             |
-| ⬜   | DFS on Grid              | [LeetCode 695 – Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                                  | Recursive DFS with bounds check                                       |
-| ⬜   | Adjacency List Traversal | [LeetCode 133 – Clone Graph](https://leetcode.com/problems/clone-graph/)                                                                                                | Use dict + DFS/BFS                                                    |
-| ✅   | Adjacency List Traversal | [LeetCode 547- Number of Provinces](https://leetcode.com/problems/number-of-provinces/)                                                                                 | [Use set/dict + DFS/BFS](solutions/number-of-provinces.md)            |
-| ✅   | Array of Edges Traversal | [LeetCode 323. Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/) | [Use set/dict + DFS/BFS](solutions/number-of-connected-components.md) |
+| Done | Pattern                  | Practice                                                                                                                                                                | Notes                                                                                                                 |
+| :--- | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| ✅   | DFS on Grid              | [LeetCode 200 – Number of Islands](https://leetcode.com/problems/number-of-islands/)                                                                                    | [Use visited set + queue](solutions/number-of-islands.md)                                                             |
+| ✅   | BFS on binary tree       | [LeetCode 199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                                                 | [use a queue / "deque" in python](solutions/binary-tree-right-side-view.md)                                           |
+| ✅   | BFS using DFS            | [LeetCode](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)                                                                                     | [during DFS maintain results in global array indexed by level](solutions/binary-tree-zigzag-level-order-traversal.md) |
+| ⬜   | DFS on Grid              | [LeetCode 695 – Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                                  | Recursive DFS with bounds check                                                                                       |
+| ⬜   | Adjacency List Traversal | [LeetCode 133 – Clone Graph](https://leetcode.com/problems/clone-graph/)                                                                                                | Use dict + DFS/BFS                                                                                                    |
+| ✅   | Adjacency List Traversal | [LeetCode 547- Number of Provinces](https://leetcode.com/problems/number-of-provinces/)                                                                                 | [Use set/dict + DFS/BFS](solutions/number-of-provinces.md)                                                            |
+| ✅   | Array of Edges Traversal | [LeetCode 323. Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/) | [Use set/dict + DFS/BFS](solutions/number-of-connected-components.md)                                                 |
 
 ✅ Strategy for the Week
 Focus on medium-level problems in these categories.
