@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 560. Subarray Sum Equals K
 
@@ -69,6 +69,44 @@ But with negative numbers, this logic breaks:
 - Adding a negative number can decrease the sum unexpectedly.
 - Removing a number might increase the sum.
 - You can’t guarantee that shrinking or expanding will move you closer to k.
+
+### Trace table 1
+
+Example: nums = [1, 2, 1, 2, 1], k = 3  
+We want to count how many contiguous subarrays sum to k = 3.
+
+📊 Step-by-Step Trace Table
+
+| Index | Num | curr_sum | curr_sum - k | prefix_sum[curr_sum - k] | Count Added | Total Count | Updated prefix_sum                   |
+| :---- | :-- | :------- | :----------- | :----------------------- | :---------- | :---------- | :----------------------------------- |
+| 0     | 1   | 1        | -2           | 0                        | 0           | 0           | {0: 1, 1: 1}                         |
+| 1     | 2   | 3        | 0            | 1                        | 1           | 1           | {0: 1, 1: 1, 3: 1}                   |
+| 2     | 1   | 4        | 1            | 1                        | 1           | 2           | {0: 1, 1: 1, 3: 1, 4: 1}             |
+| 3     | 2   | 6        | 3            | 1                        | 1           | 3           | {0: 1, 1: 1, 3: 1, 4: 1, 6: 1}       |
+| 4     | 1   | 7        | 4            | 1                        | 1           | 4           | {0: 1, 1: 1, 3: 1, 4: 1, 6: 1, 7: 1} |
+
+✅ Final Result
+
+> return count # → 4
+
+### Explaination
+
+prefix_sum[curr_sum - k] > 1 means there are multiple previous subarrays that ended at different indices but all had the same cumulative sum difference from the current point. Each one marks a valid starting point for a new subarray that sums to k.
+
+#### 💥 High-frequency case: nums = [0, 0, 0, 0], k = 0
+
+This is where prefix_sum[curr_sum - k] becomes greater than 1:
+
+| Index | Num | curr_sum | curr_sum - k | prefix_sum[curr_sum - k] | Count | Added prefix_sum |
+| :---- | :-- | :------- | :----------- | :----------------------- | :---- | :--------------- |
+| 0     | 0   | 0        | 0            | 1                        | 1     | {0:2}            |
+| 1     | 0   | 0        | 0            | 2                        | 2     | {0:3}            |
+| 2     | 0   | 0        | 0            | 3                        | 3     | {0:4}            |
+| 3     | 0   | 0        | 0            | 4                        | 4     | {0:5}            |
+
+#### ✅ Final count: 1 + 2 + 3 + 4 = 10 subarrays
+
+Each zero adds to the total count based on how many times we've seen curr_sum = 0 before. That’s why prefix_sum[curr_sum - k] can be greater than 1 — and why this pattern is so powerful for counting subarrays.
 
 ### Solution (From copilot ai)
 
