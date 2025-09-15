@@ -21,25 +21,25 @@ Using this for general algorithm descriptions
 
 ## 🔢 Arrays & Strings
 
-| Done | Pattern             | Practice                                                                                                                                     | Notes                                                                                            |
-| :--- | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
-| ✅   | Two Pointers        | [LeetCode 283 – Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                     | [In-place manipulation](solutions/move-zeros.md)                                                 |
-| ✅   | Sliding Window      | [LeetCode 3 – Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Track sliding window with dict](solutions/longest-substring-without-repeating-characters.md)    |
-| ✅   | Prefix Sum          | [LeetCode 560 – Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                 | [Use hashmap for cumulative sums](solutions/prefix_sums/subarray-sum-equals-k.md)                |
-| ✅   | Prefix Sum          | [LeetCode 525 – Contiguous Array](https://leetcode.com/problems/contiguous-array/)                                                           | [Track running count of 0s and 1s → prefix sum trick](solutions/prefix_sums/contiguous-array.md) |
-| ✅   | Prefix Sum + Modulo | [LeetCode 974 – Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)                                   | [Use hashmap to count prefix_sum % k](solutions/prefix_sums/subarray-sums-divisible-by-k.md)     |
-| ⬜   | Prefix Sum + Index  | [LeetCode 325 – Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)                       | Store earliest index of each prefix sum                                                          |
-| ⬜   | Prefix Sum + Binary | [LeetCode 930 – Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/)                                         | Count subarrays with sum = goal using hashmap                                                    |
-| ⬜   | Prefix Sum + Odd    | [LeetCode 1248 – Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/)                              | Transform to prefix sum of odd counts                                                            |
-| ⬜   | String Manipulation | [LeetCode 14 – Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)                                                  | Clean string traversal logic                                                                     |
+| Done | Pattern             | Practice                                                                                                                                     | Notes                                                                                                  |
+| :--- | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- |
+| ✅   | Two Pointers        | [LeetCode 283 – Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                     | [In-place manipulation](solutions/move-zeros.md)                                                       |
+| ✅   | Sliding Window      | [LeetCode 3 – Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Track sliding window with dict](solutions/longest-substring-without-repeating-characters.md)          |
+| ✅   | Prefix Sum          | [LeetCode 560 – Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                 | [Use hashmap for cumulative sums](solutions/prefix_sums/subarray-sum-equals-k.md)                      |
+| ✅   | Prefix Sum          | [LeetCode 525 – Contiguous Array](https://leetcode.com/problems/contiguous-array/)                                                           | [Track running count of 0s and 1s → prefix sum trick](solutions/prefix_sums/contiguous-array.md)       |
+| ✅   | Prefix Sum + Modulo | [LeetCode 974 – Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)                                   | [Use hashmap to count prefix_sum % k](solutions/prefix_sums/subarray-sums-divisible-by-k.md)           |
+| ✅   | Prefix Sum + Index  | [LeetCode 325 – Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)                       | [Store earliest index of each prefix sum](solutions/prefix_sums/maximum-size-subarray-sum-equals-k.md) |
+| ✅   | Prefix Sum + Binary | [LeetCode 930 – Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/)                                         | [Count subarrays with sum = goal using hashmap](solutions/prefix_sums/binary-subarrays-with-sum.md)    |
+| ✅   | Prefix Sum + Odd    | [LeetCode 1248 – Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/)                              | [Transform to prefix sum of odd counts](solutions/prefix_sums/count-number-of-nice-subarrays.md)       |
+| ✅   | String Manipulation | [LeetCode 14 – Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)                                                  | [Clean string traversal logic](solutions/longest-common-prefix.md)                                     |
 
 ## 🧮 Hashing
 
-| Done | Pattern         | Practice                                                                                                   | Notes                                       |
-| :--- | :-------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------ |
-| ⬜   | Frequency Count | [LeetCode 387 – First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | Use collections.Counter                     |
-| ⬜   | Hashmap Lookup  | [LeetCode 1 – Two Sum](https://leetcode.com/problems/two-sum/)                                             | Classic hashmap pattern                     |
-| ⬜   | Grouping        | [LeetCode 49 – Group Anagrams](https://leetcode.com/problems/group-anagrams/)                              | Use tuple of counts or sorted string as key |
+| Done | Pattern         | Practice                                                                                                   | Notes                                                                      |
+| :--- | :-------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| ✅   | Frequency Count | [LeetCode 387 – First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Use collections.Counter](solutions/first-unique-character-in-a-string.md) |
+| ✅   | Hashmap Lookup  | [LeetCode 1 – Two Sum](https://leetcode.com/problems/two-sum/)                                             | [Classic hashmap pattern](solutions/two-sum.md)                            |
+| ✅   | Grouping        | [LeetCode 49 – Group Anagrams](https://leetcode.com/problems/group-anagrams/)                              | [Use tuple of counts or sorted string as key](solutions/group-anagrams.md) |
 
 ## 🔗 Linked Lists
 
