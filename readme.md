@@ -43,11 +43,11 @@ Using this for general algorithm descriptions
 
 ## 🔗 Linked Lists
 
-| Done | Pattern            | Practice                                                                                      | Notes                   |
-| :--- | :----------------- | :-------------------------------------------------------------------------------------------- | :---------------------- |
-| ⬜   | Fast/Slow Pointers | [LeetCode 141 – Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)          | Floyd’s cycle detection |
-| ⬜   | Reversal           | [LeetCode 206 – Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)      | Iterative and recursive |
-| ⬜   | Merge Lists        | [LeetCode 21 – Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Use dummy node pattern  |
+| Done | Pattern            | Practice                                                                                      | Notes                                                         |
+| :--- | :----------------- | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| ✅   | Fast/Slow Pointers | [LeetCode 141 – Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)          | [set/Floyd’s cycle detection](solutions/linked-list-cycle.md) |
+| ✅   | Reversal           | [LeetCode 206 – Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)      | [Iterative and recursive](solutions/reverse-linked-list.md)   |
+| ⬜   | Merge Lists        | [LeetCode 21 – Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Use dummy node pattern                                        |
 
 ## 📚 Stacks & Queues
 

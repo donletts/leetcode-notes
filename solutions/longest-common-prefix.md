@@ -1,4 +1,4 @@
-# [One Week Study Guide](../../readme.md)
+# [One Week Study Guide](../readme.md)
 
 ## 14. Longest Common Prefix
 
@@ -52,6 +52,9 @@ LCP(S1​…Sn​)=LCP(LCP(LCP(S1​,S2​),S3​),…Sn​)
 #### Algorithm
 
 To employ this idea, the algorithm iterates through the strings [S1…Sn], finding at each iteration i the longest common prefix of strings LCP(S1…Si) When LCP(S1…Si) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S1…Sn).
+
+![horizontal scanning](images/14_basic.jpg)
+Figure 1. Finding the longest common prefix (Horizontal scanning)
 
 ### Solution (From Solution)
 
