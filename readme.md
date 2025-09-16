@@ -51,11 +51,11 @@ Using this for general algorithm descriptions
 
 ## 📚 Stacks & Queues
 
-| Done | Pattern           | Practice                                                                                 | Notes                       |
-| :--- | :---------------- | :--------------------------------------------------------------------------------------- | :-------------------------- |
-| ⬜   | Monotonic Stack   | [LeetCode 739 – Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)   | Track indices with stack    |
-| ⬜   | Valid Parentheses | [LeetCode 20 – Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)      | Use stack to match pairs    |
-| ⬜   | Queue Simulation  | [LeetCode 933 – Number of Recent](https://leetcode.com/problems/number-of-recent-calls/) | Calls Use collections.deque |
+| Done | Pattern           | Practice                                                                                 | Notes                                                              |
+| :--- | :---------------- | :--------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| ✅   | Monotonic Stack   | [LeetCode 739 – Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)   | [Track indices with stack](solutions/daily-temperatures.md)        |
+| ✅   | Valid Parentheses | [LeetCode 20 – Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)      | [Use stack to match pairs](solutions/valid-parentheses.md)         |
+| ✅   | Queue Simulation  | [LeetCode 933 – Number of Recent](https://leetcode.com/problems/number-of-recent-calls/) | [Calls Use collections.deque](solutions/number-of-recent-calls.md) |
 
 ## 🌲 Trees
 

@@ -1,4 +1,4 @@
-# [One Week Study Guide](../../readme.md)
+# [One Week Study Guide](../readme.md)
 
 ## 141. Linked List Cycle
 
