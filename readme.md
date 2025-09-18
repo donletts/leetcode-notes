@@ -59,12 +59,12 @@ Using this for general algorithm descriptions
 
 ## 🌲 Trees
 
-| Done | Pattern            | Practice                                                                                                 | Notes                                                                  |
-| :--- | :----------------- | :------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
-| ✅   | DFS Traversal      | [LeetCode 144 – Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)       | [Recursive and iterative](solutions/binary-tree-preorder-traversal.md) |
-| ⬜   | BFS Traversal      | [LeetCode 102 – Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Use queue for level tracking                                           |
-| ⬜   | Depth Calculation  | [LeetCode 104 – Max Depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                  | Classic recursive DFS                                                  |
-| ⬜   | Symmetry / Balance | [LeetCode 101 – Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                           | Mirror check with recursion                                            |
+| Done | Pattern            | Practice                                                                                                 | Notes                                                                          |
+| :--- | :----------------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| ✅   | DFS Traversal      | [LeetCode 144 – Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)       | [Recursive and iterative](solutions/binary-tree-preorder-traversal.md)         |
+| ✅   | BFS Traversal      | [LeetCode 102 – Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Use queue for level tracking](solutions/binary-tree-level-order-traversal.md) |
+| ⬜   | Depth Calculation  | [LeetCode 104 – Max Depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                  | Classic recursive DFS                                                          |
+| ⬜   | Symmetry / Balance | [LeetCode 101 – Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                           | Mirror check with recursion                                                    |
 
 ## 🧭 Graphs (Just Starting)
 
