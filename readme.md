@@ -57,13 +57,24 @@ Using this for general algorithm descriptions
 | ✅   | Valid Parentheses | [LeetCode 20 – Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)      | [Use stack to match pairs](solutions/valid-parentheses.md)         |
 | ✅   | Queue Simulation  | [LeetCode 933 – Number of Recent](https://leetcode.com/problems/number-of-recent-calls/) | [Calls Use collections.deque](solutions/number-of-recent-calls.md) |
 
+## 🛠 Priority Queues / Heaps
+
+| Done | Pattern                  | Practice                                                                                                         | Notes                                                       |
+| :--- | :----------------------- | :--------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| ⬜   | Min-Heap (heapq)         | [LeetCode 215 – Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Use `heapq` for O(n log k) selection                        |
+| ⬜   | Max-Heap via Negation    | [LeetCode 973 – K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)           | Push negated values into `heapq` to simulate max-heap       |
+| ⬜   | Heap for Running Median  | [LeetCode 295 – Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)       | Two heaps: max-heap for lower half, min-heap for upper half |
+| ⬜   | Heap for Scheduling      | [LeetCode 253 – Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                               | Min-heap to track earliest finishing meeting                |
+| ⬜   | Heap for Top-K Frequency | [LeetCode 347 – Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                 | Count with hashmap, push into heap, pop k times             |
+| ⬜   | Heap in Graph Algorithms | [LeetCode 743 – Network Delay Time](https://leetcode.com/problems/network-delay-time/)                           | Dijkstra’s algorithm with min-heap for shortest path        |
+
 ## 🌲 Trees
 
 | Done | Pattern            | Practice                                                                                                 | Notes                                                                          |
 | :--- | :----------------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
 | ✅   | DFS Traversal      | [LeetCode 144 – Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)       | [Recursive and iterative](solutions/binary-tree-preorder-traversal.md)         |
 | ✅   | BFS Traversal      | [LeetCode 102 – Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Use queue for level tracking](solutions/binary-tree-level-order-traversal.md) |
-| ⬜   | Depth Calculation  | [LeetCode 104 – Max Depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                  | Classic recursive DFS                                                          |
+| ✅   | Depth Calculation  | [LeetCode 104 – Max Depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                  | [Classic recursive DFS](solutions/maximum-depth-of-binary-tree.md)             |
 | ⬜   | Symmetry / Balance | [LeetCode 101 – Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                           | Mirror check with recursion                                                    |
 
 ## 🧭 Graphs (Just Starting)

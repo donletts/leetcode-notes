@@ -206,3 +206,18 @@ As for which node we should start traversing from, this will depend on the probl
 **Note**: In a language like Python, using a set for seen is very easy and relatively fast. In other languages, it may be faster (in terms of runtime) to use an array for seen if the range of states is known (which it usually is, because most graph problems have the nodes numbered from 0 to n - 1).
 
 Using either a set or an array will yield the same time complexity, and doesn't change the algorithm in any way. It's just a small implementation detail to keep in mind if you use a language like C++.
+
+### 📌 Priority Queues
+
+priority queues unlock a whole family of problems around **greedy algorithms**, **heap-based optimizations**, and **efficient retrieval of min/max elements**.
+
+- In Python, heapq is min-heap only — simulate max-heap by pushing -value.
+- Common patterns:
+  - Top-K problems → maintain a heap of size k
+  - Streaming problems → two heaps for median or percentile
+  - Scheduling → min-heap keyed by end time
+  - Graph shortest paths → min-heap keyed by distance
+- Time complexity:
+  - Push/pop: O(log n)
+  - Peek: O(1)
+  - Build heap: O(n)
