@@ -10,14 +10,14 @@ A subarray is a contiguous part of an array.
 
 ### Example 1
 
-**Input**: nums = [4,5,0,-2,-3,1], k = 5  
-**Output**: 7  
-**Explanation**: There are 7 subarrays with a sum divisible by k = 5:  
+**Input**: nums = [4,5,0,-2,-3,1], k = 5
+**Output**: 7
+**Explanation**: There are 7 subarrays with a sum divisible by k = 5:
 [4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
 
 ### Example 2
 
-**Input**: nums = [5], k = 9  
+**Input**: nums = [5], k = 9
 **Output**: 0
 
 **Constraints**:
@@ -59,7 +59,7 @@ nums = [4, 5, 0, -2, -3, 1] with k = 5
 | 4     | -3  | 4                                 | 3                    | 3           | 6           | {0: 1, 4: 4, 2: 1} |
 | 5     | 1   | 0                                 | 1                    | 1           | 7           | {0: 2, 4: 4, 2: 1} |
 
-**Final Result:**  
+**Final Result:**
 return count # → 7
 
 ### Solution (From copilot ai)

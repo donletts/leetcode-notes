@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 144. Binary Tree Preorder Traversal
 

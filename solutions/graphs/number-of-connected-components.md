@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 323. Number of Connected Components in an Undirected Graph
 
@@ -13,14 +13,14 @@ Return the number of connected components in the graph.
 
 ![connected graph](images/conn1-graph.jpg)
 
-**Input:** n = 5, edges = [[0,1],[1,2],[3,4]]  
+**Input:** n = 5, edges = [[0,1],[1,2],[3,4]]
 **Output:** 2
 
 ### Example 2
 
 ![connected graph](images/conn2-graph.jpg)
 
-**Input:** n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]  
+**Input:** n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]
 **Output:** 1
 
 Constraints:

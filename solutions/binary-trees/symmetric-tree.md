@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 101. Symmetric Tree
 
@@ -8,13 +8,13 @@ Given the root of a binary tree, check whether it is a mirror of itself (i.e., s
 
 ## Example 1
 
-![ex1](images/symtree1.jpg)  
+![ex1](images/symtree1.jpg)
 **Input**: root = [1,2,2,3,4,4,3]
 **Output**: true
 
 ## Example 2
 
-![ex2](images/symtree2.jpg)  
+![ex2](images/symtree2.jpg)
 **Input**: root = [1,2,2,null,3,null,3]
 **Output**: false
 

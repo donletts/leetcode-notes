@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 102. Binary Tree Level Order Traversal
 
@@ -9,18 +9,18 @@ Given the root of a binary tree, return the level order traversal of its nodes' 
 
 ### Example 1
 
-![ex1](images/tree1.jpg)  
-**Input**: root = [3,9,20,null,null,15,7]  
+![ex1](images/tree1.jpg)
+**Input**: root = [3,9,20,null,null,15,7]
 **Output**: [[3],[9,20],[15,7]]
 
 ### Example 2
 
-**Input**: root = [1]  
+**Input**: root = [1]
 **Output**: [[1]]
 
 ### Example 3
 
-**Input**: root = []  
+**Input**: root = []
 **Output**: []
 
 **Constraints**:

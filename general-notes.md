@@ -134,7 +134,7 @@ Many times, the nodes of a graph will be labeled from 0 to n - 1. The problem st
 
 With binary trees, traversal was easy because at any given node, we only needed to reference node.left and node.right. This allowed us to focus only on the traversal (with DFS or BFS). With graphs, a node can have any number of neighbors. Before we start our traversal, we usually need to do some work to make sure that for any given node, we can immediately access all the neighbors of said node.
 
-#### **First input format:** array of edges (see [number of connected components](solutions/number-of-connected-components.md))
+#### **First input format:** array of edges (see [number of connected components](solutions/graphs/number-of-connected-components.md))
 
 So, why can't we immediately start traversal? Let's say that we want to start a DFS from node 0 (sometimes the problem will state which node you should start from, sometimes you will need to figure this out yourself). When we're at node 0, how do we find the neighbors? We would need to iterate over the entire input to find all edges that include 0. When we move to a neighbor node, we would need to iterate over the entire input again to find all the neighbors of that node.
 
@@ -173,7 +173,7 @@ The graph in the image above can be represented by the adjacency list graph = [[
 
 Notice that with this input, we can already access all the neighbors of any given node. We don't need to do any pre-processing! This makes an adjacency list the most convenient format. If we want all the neighbors of node 6, we just check graph[6].
 
-#### **Third input format:** adjacency matrix (see [number of provinces](solutions/number-of-provinces.md))
+#### **Third input format:** adjacency matrix (see [number of provinces](solutions/graphs/number-of-provinces.md))
 
 The next format is an adjacency matrix. Once again, the nodes will be numbered from 0 to n - 1. You will be given a 2D matrix of size n x n, let's call it graph. If graph[i][j] == 1, that means there is an outgoing edge from node i to node j.
 
@@ -183,7 +183,7 @@ When given this format, you have two options. During the traversal, at any given
 
 Both of these approaches will have a time complexity of O(n2).
 
-#### **Last input format:** matrix (see [number of islands](solutions/number-of-islands.md))
+#### **Last input format:** matrix (see [number of islands](solutions/graphs/number-of-islands.md))
 
 The last format we'll talk about is more subtle but very common. The input will be a 2D matrix and the problem will describe a story. Each square will represent something, and the squares will be connected in some way. For example, "Each square of the matrix is a village. Villages trade with their neighboring villages, which are the villages directly above, to the left, to the right, or below them."
 In this case, each square (row, col) of the matrix is a node, and the neighbors are (row - 1, col), (row, col - 1), (row + 1, col), (row, col + 1) (if in bounds).

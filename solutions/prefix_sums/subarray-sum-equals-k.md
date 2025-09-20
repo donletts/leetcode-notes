@@ -11,12 +11,12 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 
 **Example 1:**
 
-> **Input:** nums = [1,1,1], k = 2  
+> **Input:** nums = [1,1,1], k = 2
 > **Output:** 2
 
 **Example 2:**
 
-> **Input:** nums = [1,2,3], k = 3  
+> **Input:** nums = [1,2,3], k = 3
 > **Output:** 2
 
 Constraints:
@@ -72,7 +72,7 @@ But with negative numbers, this logic breaks:
 
 ### Trace table 1
 
-Example: nums = [1, 2, 1, 2, 1], k = 3  
+Example: nums = [1, 2, 1, 2, 1], k = 3
 We want to count how many contiguous subarrays sum to k = 3.
 
 📊 Step-by-Step Trace Table

@@ -1,4 +1,4 @@
-# [One Week Study Guide](../readme.md)
+# [One Week Study Guide](../../readme.md)
 
 ## 739. Daily Temperatures
 
@@ -9,17 +9,17 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
 ### Example 1
 
-**Input**: temperatures = [73,74,75,71,69,72,76,73]  
+**Input**: temperatures = [73,74,75,71,69,72,76,73]
 **Output**: [1,1,4,2,1,1,0,0]
 
 ### Example 2
 
-**Input**: temperatures = [30,40,50,60]  
+**Input**: temperatures = [30,40,50,60]
 **Output**: [1,1,1,0]
 
 ### Example 3
 
-**Input**: temperatures = [30,60,90]  
+**Input**: temperatures = [30,60,90]
 **Output**: [1,1,0]
 
 **Constraints**:

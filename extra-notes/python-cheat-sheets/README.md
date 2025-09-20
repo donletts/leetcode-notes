@@ -1,13 +1,13 @@
 # 📚 Python Cheat Sheets Index
 
-A quick‑access index to all Python algorithm/data structure cheat sheets in this folder.  
+A quick‑access index to all Python algorithm/data structure cheat sheets in this folder.
 Click any link to jump directly to the full reference.
 
 ---
 
 ## 📦 Core Data Structures & Patterns
 
-- [📝 Python Heap Cheat Sheet](./heap.md)
+- [📝 Python Heap Cheat Sheet](./heaps.md)
 - [📝 Python Prefix Sum Cheat Sheet](./prefix-sum.md)
 - [📝 Python Sliding Window Cheat Sheet](./sliding-window.md)
 - [📝 Python Two Pointers Cheat Sheet](./two-pointers.md)
@@ -27,13 +27,13 @@ Click any link to jump directly to the full reference.
 
 ## 🗂 Folder Structure
 
-extra-notes/  
-└── python-cheat-sheets/  
-├── heap.md  
-├── prefix-sum.md  
-├── sliding-window.md  
-├── two-pointers.md  
-├── hashmap-patterns.md  
-├── graph-traversal.md  
-├── monotonic-stack.md  
+extra-notes/
+└── python-cheat-sheets/
+├── heap.md
+├── prefix-sum.md
+├── sliding-window.md
+├── two-pointers.md
+├── hashmap-patterns.md
+├── graph-traversal.md
+├── monotonic-stack.md
 └── README.md ← (this file)
