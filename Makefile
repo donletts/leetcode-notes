@@ -46,19 +46,22 @@ docker-run: docker-build
 			-w /app \
 			-it $(IMAGE_NAME) /bin/bash; \
 		docker exec $(CONTAINER_NAME) touch ./in-container; \
-		docker exec $(CONTAINER_NAME) groupadd --gid $(gid) $(username); \
-		docker exec $(CONTAINER_NAME) useradd -s /bin/bash --uid $(uid) --gid $(gid) -m $(username); \
-		echo ${username} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${username} \
-    	chmod 0440 /etc/sudoers.d/${username} \
+		if ! getent group $(gid) >> /dev/null; then \
+			docker exec $(CONTAINER_NAME) groupadd --gid $(gid) $(username); \
+			docker exec $(CONTAINER_NAME) useradd -s /bin/bash --uid $(uid) --gid $(gid) -m $(username); \
+			docker exec $(CONTAINER_NAME) echo ${username} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${username}; \
+			docker exec $(CONTAINER_NAME) chmod 0440 /etc/sudoers.d/${username}; \
+		fi; \
 		docker cp --follow-link ~/.bashrc $(CONTAINER_NAME):/home/$(username); \
 		docker cp --follow-link ~/.gitconfig $(CONTAINER_NAME):/home/$(username); \
-	fi
-	${MAKE} docker-join
+	fi; \
+# 	${MAKE} docker-join
 
 .PHONY: docker-join
 docker-join: not-in-container
 docker-join:
-	docker exec -u $(username) -it $(CONTAINER_NAME) /bin/bash
+# 	docker exec -u $(username) -it $(CONTAINER_NAME) /bin/bash
+	docker exec -it $(CONTAINER_NAME) /bin/bash
 
 .PHONY: docker-stop
 docker-stop: not-in-container
@@ -69,8 +72,9 @@ docker-stop:
 # Run lychee directly without opening a shell
 .PHONY: docker-check
 docker-check: not-in-container
-docker-check: docker-build
-	docker exec -u $(username) -it $(CONTAINER_NAME) lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" --exclude-all-private .
+docker-check: docker-run
+# 	docker exec -u $(username) -it $(CONTAINER_NAME) lychee --verbose --no-progress  .
+	docker exec -it $(CONTAINER_NAME) lychee --verbose --no-progress  .
 
 # Clean up dangling images/containers
 .PHONY: docker-clean
@@ -81,4 +85,4 @@ docker-clean:
 .PHONY: lint
 lint: in-container
 lint:
-	lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" --exclude-all-private .
+	lychee --verbose --no-progress .
