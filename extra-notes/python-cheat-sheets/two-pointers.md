@@ -32,7 +32,7 @@ Two indices `l` and `r` moving towards each other or in tandem.
 ```python
 # Opposite ends
 def two_sum_sorted(nums, target):
-    l, r = 0, len(nums) - 1
+    l = 0, r = len(nums) - 1
     while l < r:
         s = nums[l] + nums[r]
         if s == target:

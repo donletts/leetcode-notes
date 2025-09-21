@@ -36,6 +36,72 @@ From <https://leetcode.com/explore/interview/card/leetcodes-interview-crash-cour
 
 From <https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/707/traversals-trees-graphs/4619/>
 
+#### Pre-order, in-order, post-order
+
+🌳 Example Tree
+
+```text
+      1
+     / \
+    2   3
+   / \    \
+  4   5    6
+```
+
+##### 1. Preorder Traversal —
+
+`Root → Left → Right`
+
+- Visit the root first.
+- Then traverse the left subtree.
+- Then traverse the right subtree.
+
+Steps: `1 → 2 → 4 → 5 → 3 → 6`
+
+Use cases:
+
+- Copying a tree.
+- Serializing a tree structure.
+- Evaluating prefix (Polish) expressions.
+
+##### 2. Inorder Traversal
+
+`Left → Root → Right`
+
+- Traverse the left subtree first.
+- Visit the root.
+- Traverse the right subtree.
+
+Steps: `4 → 2 → 5 → 1 → 3 → 6`
+
+Use cases:
+
+- For a **Binary Search Tree**, this yields sorted order.
+- Infix expression evaluation.
+
+##### 3. Postorder Traversal
+
+`Left → Right → Root`
+
+- Traverse the left subtree first.
+- Then traverse the right subtree.
+- Visit the root last.
+
+Steps: `4 → 5 → 2 → 6 → 3 → 1`
+
+Use cases:
+
+- Deleting/freeing nodes (children before parent).
+- Evaluating postfix (Reverse Polish) expressions.
+
+##### 📊 Summary Table
+
+| Traversal | Visit Order         | Example Output | Common Uses                           |
+| --------- | ------------------- | -------------- | ------------------------------------- |
+| Preorder  | Root → Left → Right | 1 2 4 5 3 6    | Copying tree, prefix notation         |
+| Inorder   | Left → Root → Right | 4 2 5 1 3 6    | Sorted output for BST, infix notation |
+| Postorder | Left → Right → Root | 4 5 2 6 3 1    | Deletion, postfix notation            |
+
 #### Depth First Search
 
 DFS is implemented using a stack (recursion uses a stack under the hood)
