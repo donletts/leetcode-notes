@@ -24,9 +24,11 @@ not-in-container:
 # Build the Docker image
 .PHONY: docker-build
 docker-build: not-in-container
+docker-build: built = $(shell docker image list --filter reference=$(IMAGE_NAME) -aq)
 docker-build:
-	docker build -t $(IMAGE_NAME) \
-		.
+	if [ -z "$(built)" ]; then \
+		docker build -t $(IMAGE_NAME) .; \
+	fi
 # 		--build-arg user_name=$(username) \
 # 		--build-arg user_uid=$(uid) \
 # 		--build-arg user_gid=$(gid) \
@@ -68,10 +70,7 @@ docker-stop:
 .PHONY: docker-check
 docker-check: not-in-container
 docker-check: docker-build
-	docker run --rm \
-	    -v $(PWD):/app \
-	    -w /app \
-	    $(IMAGE_NAME) lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" .
+	docker exec -u $(username) -it $(CONTAINER_NAME) lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" --exclude-all-private .
 
 # Clean up dangling images/containers
 .PHONY: docker-clean
@@ -82,4 +81,4 @@ docker-clean:
 .PHONY: lint
 lint: in-container
 lint:
-	lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" --exclude-all-private --exclude-file .lycheeignore .
+	lychee --verbose --no-progress --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" --exclude-all-private .

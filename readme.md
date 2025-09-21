@@ -75,7 +75,7 @@ Using this for general algorithm descriptions
 | ✅   | DFS Traversal      | [LeetCode 144 – Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)       | [Recursive and iterative](solutions/binary-trees/binary-tree-preorder-traversal.md)         |
 | ✅   | BFS Traversal      | [LeetCode 102 – Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Use queue for level tracking](solutions/binary-trees/binary-tree-level-order-traversal.md) |
 | ✅   | Depth Calculation  | [LeetCode 104 – Max Depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                  | [Classic recursive DFS](solutions/binary-trees/maximum-depth-of-binary-tree.md)             |
-| ⬜   | Symmetry / Balance | [LeetCode 101 – Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                           | Mirror check with recursion                                                                 |
+| ✅   | Symmetry / Balance | [LeetCode 101 – Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                           | [Mirror check with recursion](solutions/binary-trees/symmetric-tree.md)                     |
 
 ## 🧭 Graphs (Just Starting)
 
