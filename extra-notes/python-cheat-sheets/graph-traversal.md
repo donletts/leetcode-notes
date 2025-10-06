@@ -25,7 +25,8 @@ Graph traversal is like exploring a network of rooms connected by doors.
 
 ## 📊 Data Structure Representation
 
-Adjacency list: `{node: [neighbors]}`  
+Adjacency list: `{node: [neighbors]}`
+
 Adjacency matrix: 2D list of 0/1.
 
 ## 📦 Basics

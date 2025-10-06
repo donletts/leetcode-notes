@@ -37,7 +37,8 @@ A `heap` is a complete binary tree stored in an array, where:
 
 Example Min-Heap storing `[1, 3, 4, 5, 9, 6]`:
 
-**Index**: `0 1 2 3 4 5`  
+**Index**: `0 1 2 3 4 5`
+
 **Value**: `[1, 3, 4, 5, 9, 6]`
 
 Tree view:
