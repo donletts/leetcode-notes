@@ -5,8 +5,8 @@
    - What: Spread requests across multiple servers.
    - When: Traffic > 1 server’s capacity.
    - Trade‑offs:
-      - ✅ Prevents overload, improves availability
-      - ❌ Adds a hop, needs health checks
+     - ✅ Prevents overload, improves availability
+     - ❌ Adds a hop, needs health checks
 
 1. Caching
 
@@ -62,9 +62,9 @@
 
 ## 🧠 How to Use in Interviews
 
-   - Step 1: Identify the bottleneck (reads, writes, traffic spikes, failures).
-   - Step 2: Pick the lever (cache, shard, queue, replicate).
-   - Step 3: State the trade‑off clearly.
+- Step 1: Identify the bottleneck (reads, writes, traffic spikes, failures).
+- Step 2: Pick the lever (cache, shard, queue, replicate).
+- Step 3: State the trade‑off clearly.
 
 ## Example
 

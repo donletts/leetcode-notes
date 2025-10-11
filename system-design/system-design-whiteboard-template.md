@@ -13,7 +13,7 @@ Perfect — here’s a **one‑page System Design Whiteboard Template** in Markd
 
 ## 2. High‑Level Architecture
 
-```
+```txt
 [ Client(s) ]
      |
      v
