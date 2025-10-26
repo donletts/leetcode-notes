@@ -56,6 +56,8 @@ def dfs(node, graph, visited):
 
 ## 🎯 Common Patterns
 
+[200. Number of Islands](https://leetcode.com/problems/number-of-islands/description/)
+
 ```python
 # Grid BFS example
 def num_islands(grid):
@@ -79,4 +81,34 @@ def num_islands(grid):
                 bfs(r, c)
                 count += 1
     return count
+```
+
+[1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+
+```python
+# shortest path
+    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
+        if grid[0][0] == 1:
+            return -1
+
+        n = len(grid)
+
+        def valid(x, y):
+            return 0 <= x < n and 0 <= y < n and grid[x][y] == 0
+
+        directions = [(1, 0), (0, 1), (-1, 0), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+
+        stack = deque([(0, 0, 1)])
+        seen = set((0, 0))
+
+        while stack:
+            x, y, steps = stack.popleft()
+            if (x, y) == (n - 1, n - 1):
+                return steps
+            for dx, dy in directions:
+                new_x, new_y = dx + x, dy + y
+                if (new_x, new_y) not in seen and valid(new_x, new_y):
+                    stack.append((new_x, new_y, steps + 1))
+                    seen.add((new_x, new_y))
+        return -1
 ```

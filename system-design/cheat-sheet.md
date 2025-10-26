@@ -23,9 +23,9 @@
 
 ## 💾 Storage
 
-- 1 GB = 10⁹ bytes ≈ 1,000 MB
-- 1 TB = 10³ GB
-- 1 PB = 10³ TB
+- 1 GB = 10⁹ bytes = 1,000,000,000 ≈ 1,000 MB == 1 GB
+- 1 TB = 10³ GB = 1,000 GB
+- 1 PB = 10³ TB = 1,000 TB
 - Rule of thumb: 1M users × 1 MB/user ≈ 1 TB
 
 ## ⚡ Latency Targets
@@ -60,3 +60,21 @@
 - Do quick math: 1M × 10 = 10M requests/day ≈ 115 requests/sec.
 - Map to capacity: “That’s easily handled by a single load balancer, but DB writes would need sharding.”
 - Show tradeoffs: “If traffic spikes 5×, we’d need caching and horizontal scaling.”
+
+## 📦 Reasonable assumptions for common operations
+
+| Operation Name                        | Time                    |
+| :------------------------------------ | :---------------------- |
+| L1 cache reference                    | 0.5 ns                  |
+| Branch mispredict                     | 5 ns                    |
+| L2 cache reference                    | 7 ns                    |
+| Mutex lock/unlock                     | 100 ns                  |
+| Main memory reference                 | 100 ns                  |
+| Compress 1K bytes with Zippy          | 10,000 ns = 10 μs       |
+| Send 2K bytes over 1 Gbps network     | 20,000 ns = 20 μs       |
+| Read 1 MB sequentially from memory    | 250,000 ns = 250 μs     |
+| Round trip within the same datacenter | 500,000 ns = 500 μs     |
+| Disk seek                             | 10,000,000 ns = 10 ms   |
+| Read 1 MB sequentially from network   | 10,000,000 ns = 10 ms   |
+| Read 1 MB sequentially from disk      | 30,000,000 ns = 30 ms   |
+| Send packet CA→Netherlands→CA         | 150,000,000 ns = 150 ms |
