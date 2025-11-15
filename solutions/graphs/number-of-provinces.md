@@ -18,6 +18,7 @@ Return the total number of provinces.
 ![example 1](images/number-of-provinces-1.jpg)
 
 **Input**: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+
 **Output**: 2
 
 ### Example 2
@@ -25,6 +26,7 @@ Return the total number of provinces.
 ![example 1](images/number-of-provinces-1.jpg)
 
 **Input**: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+
 **Output**: 3
 
 **Constraints**:
