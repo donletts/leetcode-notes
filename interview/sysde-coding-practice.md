@@ -1,7 +1,3 @@
-Got it — here’s the **SysDE‑relevant problem set table rebuilt with direct links to the actual LeetCode problems** (not blogs or wikis). This is the surgical strike list you should drill, nothing outside of it.
-
----
-
 # 🎯 SysDE-Relevant Coding Problem Types with Direct LeetCode Links
 
 | **Category**                     | **Why It Matters for SysDE**                            | **Example Problems (Direct LeetCode Links)**                                                                                                                                                                                                                                                                           |
