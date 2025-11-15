@@ -82,41 +82,79 @@ Caching can improve performance, still need to ensure data in the cache is corre
 
 ![cache write strategies](images/cache-write-strategies.svg)
 
-#### Write-through
+1. Write-through
 
-Data is writ
+   1. Data is written to the cache and the database simultaneously.
+   2. Higher latency for the user in write operations
 
-#### Write-around
+2. Write-around
 
-#### Write-back
+   1. Data is written directly to the database, skipping the cache entirely
+   2. Can be used when bulk writes are needed and won't be read back
+   3. Reads will produce a cache miss
+
+3. Write-back
+   1. Data is written to the cache
+   2. after a period of time or under certain conditions data is written to the database
+   3. can cause loss of data if cache server crash
 
 ### Cache Invalidation Methods
 
 ![cache invalidation methods](images/cache-invalidation-methods.svg)
 
-#### Purge
+1. Purge
 
-#### Refresh
+   1. removes cached content typically when there is an update or change
+   2. when purge is received content is immediately removed
+   3. next read request will update cache
 
-#### Ban
+2. Refresh
 
-#### Time-to-live (TTL) expiration
+   1. updates cache with latest version from the origin server
+   2. unlike purge no data is removed
 
-#### Stale-while-revalidate
+3. Ban
+
+   1. invalidates cached content based on criteria (pattern or header)
+   2. content is immediately removed
+   3. all subsequent requests will go to origin
+
+4. Time-to-live (TTL) expiration
+
+   1. when request is received, cache checks time-to-live and serves content only if value hasn't expired
+   2. if expired cache fetches latest version from origin server and refreshes cache
+
+5. Stale-while-revalidate
+   1. used in web browsers and CDNs to serve stale content from the cache while content is being updated in the background
+   2. request is received, cache immediately returns data while refreshing cache in the backgroundf
+   3. low latency even if cache is out of date
 
 ### Cache Read Strategies
 
 ![cache read strategies](images/cache-read-strategies.svg)
 
-#### Read through
+1. Read through
 
-#### Read aside
+   1. Cache is responsible for retrieving data from the underlying store when a cache miss occurs.
+   2. Application requests data from the cache instead of the data store directly.
+   3. If cache miss, cache retrieves data from the data store, updates cache, then returns the data
+   4. Maintains consistency
+   5. Simplifies application code since application doesn't need to handle cache miss
+   6. improve performance in scenarios where data retrieval from data store is expensive and cache misses are infrequent
+
+2. Read aside (cache-aside, lazy loading)
+   1. application is responsible for retrieving data when a cache miss occurs
+   2. application first checks cache
+   3. on cache miss, retrieves data from data store and updates cache, then uses data
+   4. provides better control, but adds complexity
+   5. use when you need caching but also need to ensure a cache failure won't take down system (application can just go to the database).
+   6. useful when the application wants to optimize cache usage based on specific data access patterns
 
 ### Cache eviction policies
 
-1. First In First Out (FIFO)
-2. Last In First Out (LIFO)
-3. Least Recently Used (LRU)
-4. Most Recently Used (MRU)
-5. Least Frequently Used (LFU)
-6. Random Replacement (RR)
+1. First In First Out (FIFO) - Discards first block inserted without regard to how often or how many times it was accessed
+2. Last In First Out (LIFO) - Discards last block inserted without regard to how often or how many times it was accessed
+3. Least Recently Used (LRU) - Discards least recently accessed
+4. Most Recently Used (MRU) - Discards most recently accessed
+5. Least Frequently Used (LFU) - count how often an item is accessed, least often are discarded first
+6. Random Replacement (RR) - randomly selects item to discard to make space when necessary

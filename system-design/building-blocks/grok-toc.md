@@ -1,0 +1,101 @@
+# Course Content
+
+## Introduction to System Design Interview
+
+- What is a System Design Interview?
+  - Understand the purpose of system design interviews, focusing on scalability, architecture decisions, trade-offs, and real-world problem-solving skills.
+- Functional vs. Non-functional Requirements
+  - Master functional vs. non-functional requirements in system design, emphasizing scalability, performance, and trade-offs for building robust, real-world systems.
+- What are Back-of-the-Envelope Estimations?
+  - Master back-of-the-envelope estimation to assess scalability, performance, and trade-offs using quick calculations in system design interviews.
+- Things to Avoid During System Design Interview
+  - Learn what to avoid in system design interviews—like skipping trade-offs, ignoring requirements, poor communication, and rigid thinking.
+
+## Glossary of System Design Basics
+
+- System Design Basics
+  - Get familiar with core system design concepts, key architectural components, and building blocks of scalable, distributed software systems.
+- Key Characteristics of Distributed Systems
+  - Explore key characteristics of distributed systems, including scalability, reliability, availability, efficiency, fault tolerance, and manageability.
+- Load Balancing
+  - Learn how load balancing improves scalability and availability by distributing traffic using smart algorithms, health checks, and redundancy techniques.
+- Load Balancing Algorithms
+- Caching
+  - Learn caching strategies to improve system performance, including cache types, eviction policies, read/write methods, and cache invalidation techniques.
+- Data Partitioning
+  - Learn data partitioning techniques—horizontal, vertical, hybrid—and partitioning criteria to scale databases, improve performance, and balance workloads.
+- Indexes
+  - Understand how database indexes optimize query performance, enable efficient lookups, and impact write operations in large-scale systems.
+- Proxies
+  - Learn how forward and reverse proxies improve security, caching, and traffic control by mediating communication between clients and servers.
+- Redundancy and Replication
+  - Learn how redundancy and replication improve system reliability and availability through failover strategies and synchronous, asynchronous, and semi-synchronous replication.
+- SQL vs. NoSQL
+  - Compare relational and non-relational databases to understand schema flexibility, scalability, ACID compliance, and ideal use cases for each.
+- CAP Theorem
+  - Understand why distributed systems must trade off between consistency, availability, and partition tolerance—only two of the three can be guaranteed at any time.
+- PACELC Theorem
+  - Learn how PACELC extends CAP by showing that even without partitions, distributed systems must balance latency and consistency in replicated environments.
+- Consistent Hashing
+  - Learn the architecture of scalable systems using consistent hashing for efficient data partitioning, replication, and dynamic node management.
+- Long-Polling vs WebSockets vs Server-Sent Events
+  - Understand the system design of real-time communication protocols for scalable push-based updates between client and server.
+- Bloom Filters
+  - Explore space-efficient system design using Bloom filters for fast, probabilistic membership checks with minimal memory and no false negatives.
+- Quorum
+  - Design highly available distributed systems using quorum-based consistency models to coordinate read/write operations across replicated nodes.
+- Leader and Follower
+  - Understand the architecture of leader-based replication in distributed systems for consistent writes, fault tolerance, and coordinated data synchronization.
+- Heartbeat
+  - Learn how distributed systems use heartbeat signals to detect server failures and maintain reliable request routing and availability.
+- Checksum
+  - Explore how distributed systems ensure data integrity by using checksums to detect and prevent data corruption during transmission.
+- Quiz
+  - Test your understanding of system design basic concepts.
+
+## System Design Trade-Offs
+
+- Importance of Discussing Trade-offs
+  - Demonstrating trade-offs shows maturity, critical thinking, and real-world design skills crucial for scalable, practical system architecture.
+- Strong vs Eventual Consistency
+  - Explore consistency models in distributed systems, comparing strong and eventual consistency in terms of latency, availability, accuracy, and scalability trade-offs.
+- Latency vs Throughput
+  - Understand the difference between latency and throughput, and explore strategies to optimize response time and data processing capacity in systems.
+- ACID vs BASE Properties in Databases
+  - Understand key differences between ACID and BASE database models, balancing consistency, availability, scalability, and fault tolerance in distributed systems.
+- Read-Through vs Write-Through Cache
+  - Explore read-through vs write-through caching strategies for improving read performance, data consistency, and integrity in scalable systems.
+- Batch Processing vs Stream Processing
+  - Compare batch vs stream processing in system design—complexity, resource efficiency, continuous vs scheduled data flow, and real-time responsiveness.
+- Load Balancer vs. API Gateway
+  - Understand differences between Load Balancer and API Gateway in scalable architectures—traffic distribution, request routing, API management, and availability.
+- API Gateway vs Direct Service Exposure
+  - Explore API Gateway vs Direct Service Exposure in distributed systems—compare centralized routing and security with direct access and reduced latency.
+- Proxy vs. Reverse Proxy
+  - Understand how proxies and reverse proxies manage client and server traffic in distributed system design to improve security, caching, and scalability.
+- API Gateway vs. Reverse Proxy
+  - Learn the difference between API Gateways and Reverse Proxies in distributed systems, focusing on routing, security, load balancing, and orchestration.
+- SQL vs. NoSQL
+  - Compare SQL vs NoSQL databases based on schema structure, scalability, ACID compliance, flexibility, and best use cases in system design.
+- Primary-Replica vs Peer-to-Peer Replication
+  - Understand Primary-Replica vs Peer-to-Peer replication models, including data flow, consistency, scalability, fault tolerance, and use cases.
+- Data Compression vs Data Deduplication
+  - Learn the differences between data compression and deduplication for optimizing storage—focus, scope, efficiency, and best-use scenarios.
+- Server-Side Caching vs Client-Side Caching
+  - Understand server-side vs client-side caching—how they differ in location, control, performance impact, and best use across web apps.
+- REST vs RPC
+  - Learn the architectural differences between REST and RPC, including stateless resource handling vs. procedure calls, flexibility, scalability, and performance trade-offs.
+- Polling vs. Long-Polling vs. WebSockets vs. Webhooks
+  - Compare real-time delivery strategies—Polling, Long-Polling, WebSockets, and Webhooks—for scalable, event-driven system communication.
+- CDN Usage vs Direct Server Serving
+  - Learn when to use a Content Delivery Network vs direct server hosting based on traffic scale, geographic distribution, and caching efficiency.
+- Serverless Architecture vs Traditional Server-based
+  - Learn serverless system design benefits like dynamic scaling and reduced ops versus traditional server hosting with full control and overhead.
+- Stateful vs Stateless Architecture
+  - Explore the architecture of stateful vs stateless systems, comparing session handling, scalability, and design trade-offs for APIs and web services.
+- Hybrid Cloud Storage vs All-Cloud Storage
+  - Explore hybrid cloud vs all-cloud storage architectures, balancing scalability, compliance, and control for secure, flexible enterprise data strategies.
+- Token Bucket vs Leaky Bucket
+  - Learn how Token Bucket and Leaky Bucket algorithms manage network traffic shaping, rate limiting, and handling of bursty data.
+- Read Heavy vs Write Heavy System
+  - Explore how system design varies for read-heavy and write-heavy workloads with techniques like batching, replication, and data partitioning.
