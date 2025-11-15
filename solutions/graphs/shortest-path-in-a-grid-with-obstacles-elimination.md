@@ -38,8 +38,8 @@ The shortest path with one obstacle elimination at position (3,2) is 6. Such pat
 - n == grid[i].length
 - 1 <= m, n <= 40
 - 1 <= k <= m \* n
-- grid[i][j] is either 0 or 1.
-- grid[0][0] == grid[m - 1][n - 1] == 0
+- grid\[i][j] is either 0 or 1.
+- grid\[0][0] == grid\[m - 1][n - 1] == 0
 
 ## Solution
 

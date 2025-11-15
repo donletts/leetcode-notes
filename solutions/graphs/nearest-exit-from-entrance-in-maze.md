@@ -58,7 +58,7 @@ Initially, you are at the entrance cell [1,0].
 - maze.length == m
 - maze[i].length == n
 - 1 <= m, n <= 100
-- maze[i][j] is either '.' or '+'.
+- maze\[i][j] is either '.' or '+'.
 - entrance.length == 2
 - 0 <= entrancerow < m
 - 0 <= entrancecol < n

@@ -1,20 +1,24 @@
-Here’s a **tight 2‑minute incident response drill script** you can use in the SysDE troubleshooting round. This is the kind of scenario they’ll throw at you — a service breaking under load, and they want to see if you can think clearly, prioritize, and act decisively.
-
----
-
 # 🎤 Incident Response Drill — Cache Collapse → DB Overload
 
 **Question:** _Your service is throwing elevated 500s. Cache hit rate has dropped from 90% to 40%, and the database CPU is spiking. What do you do?_
 
 **Answer Script (≈2 min):**
 
+## First
+
 _"First, I’d confirm the signals: cache hit rate collapse, DB CPU spike, and elevated 500s. That tells me requests are bypassing the cache and hammering the database. My immediate priority is containment — reduce blast radius and restore stability._
+
+## Steps
 
 _Step one: throttle or rate‑limit cold keys to prevent a thundering herd. Step two: temporarily increase cache TTLs to stabilize hot keys. Step three: enable request coalescing so multiple identical misses don’t all hit the DB. In parallel, I’d spin up read replicas to absorb the load and monitor p95 latency and error rate against our SLOs._
 
+## Rollback
+
 _Rollback criteria: if cache hit rate stays below 60% or DB CPU remains pegged for more than 15 minutes, I’d revert the last deploy and restore the previous cache config. Once stable, I’d dive deep into root cause — was it a bad deploy, eviction misconfig, or cache cluster failure? Finally, I’d document the incident, add guardrails to prevent mass eviction, and automate alerts on cache hit rate thresholds so we catch this earlier next time._
 
-_The principle here is operational excellence: detect, contain, mitigate, and prevent. Reliability isn’t about avoiding failure — it’s about designing for recovery."_
+## Main Principle
+
+_The principle here is operational excellence: detect, contain, mitigate, and prevent. Reliability isn’t about avoiding failure — it’s about designing for recovery._
 
 ---
 

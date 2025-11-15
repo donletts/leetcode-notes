@@ -1,4 +1,6 @@
-# 🎤 Story 1 — CI/CD Modernization (Ownership + Invent & Simplify)
+# SysDe Stories
+
+## 🎤 Story 1 — CI/CD Modernization (Ownership + Invent & Simplify)
 
 **Question:** Tell me about a time you took ownership to improve a process.
 
@@ -7,7 +9,7 @@ _"Our embedded build pipeline was fragile and slow — builds took hours and oft
 
 ---
 
-# 🎤 Story 2 — TVAC Driver Bug Root Cause (Dive Deep + Deliver Results)
+## 🎤 Story 2 — TVAC Driver Bug Root Cause (Dive Deep + Deliver Results)
 
 **Question:** Tell me about a time you had to dive deep to solve a critical issue.
 
@@ -16,7 +18,7 @@ _"During Thermal Vacuum testing, our telemetry software started failing intermit
 
 ---
 
-# 🎤 Story 3 — Multi‑Target Build Automation (Invent & Simplify + Deliver Results)
+## 🎤 Story 3 — Multi‑Target Build Automation (Invent & Simplify + Deliver Results)
 
 **Question:** Tell me about a time you simplified a complex system.
 
