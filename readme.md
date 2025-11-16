@@ -1,4 +1,4 @@
-# 🧠 Donald’s Focused Algorithm Tracker (Week-of-OA Edition)
+# 🧠 Focused Algorithm Tracker
 
 ## [General Notes](general-notes.md)
 
