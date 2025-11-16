@@ -1,7 +1,3 @@
-Got it — I’ll turn _The Ultimate System Design Playbook_ into a **concise, structured, easy‑to‑study Markdown guide** you can drop straight into your prep notes. I’ll preserve the flow (requirements → basics → trade‑offs → interview process) but trim it down to the essentials you’ll want at your fingertips on Tuesday.
-
----
-
 # 📘 System Design Playbook — Study Guide
 
 ## 1. Collecting Requirements
@@ -138,10 +134,3 @@ Got it — I’ll turn _The Ultimate System Design Playbook_ into a **concise, s
 - **“Trade‑offs, not tools”** → Interviewers care more about _why_ you choose than _what_ you choose.
 
 ---
-
-✅ This is now a **40‑page playbook compressed into a 4‑page cheat sheet**.
-You can skim this before your round and have the right vocabulary + reasoning patterns ready.
-
----
-
-Would you like me to also create a **one‑page “System Design Whiteboard Template”** (a reusable diagram scaffold you can sketch in interviews: client → LB → servers → cache → DB → queue → monitoring)? That way you’ll always have a starting point to draw under pressure.

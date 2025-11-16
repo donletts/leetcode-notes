@@ -1,8 +1,5 @@
 # 🧠 Donald’s Focused Algorithm Tracker (Week-of-OA Edition)
 
-Absolutely — with less than a week and your current progress through the LeetCode Crash Course, the smartest move is to go deep, not wide. You want to master the patterns you've already touched so you can execute confidently under pressure.
-Here’s your pared-down Algorithm Mastery Tracker, focused only on the topics you’ve already studied:
-
 ## [General Notes](general-notes.md)
 
 Using this for general algorithm descriptions
@@ -91,10 +88,3 @@ Using this for general algorithm descriptions
 | ✅   | Array of Edges Traversal | [LeetCode 323. Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/) | [Use set/dict + DFS/BFS](solutions/graphs/number-of-connected-components.md)                                                       |
 | ✅   | Matrix Traversal         | [LeetCode 1293. Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/description/)      | [Use set/queue + BFS](solutions/graphs/shortest-path-in-a-grid-with-obstacles-elimination.md)                                      |
 | ⬜   | Matrix Traversal         | [LeetCode 1926. Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/)                                      | [Use set/queue + BFS](solutions/graphs/nearest-exit-from-entrance-in-maze.md)                                                      |
-
-✅ Strategy for the Week
-Focus on medium-level problems in these categories.
-Practice explaining your approach in writing — Amazon scores this in the OA.
-Use Python’s built-in tools: collections.Counter, deque, set, dict, recursion, and list slicing.
-
-If you want, I can also build a daily study plan for the next 5–6 days using just these topics — so you know exactly what to practice each day leading up to the OA. Want me to set that up next?

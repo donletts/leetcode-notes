@@ -122,9 +122,3 @@
 6. **Trade‑Offs** → Why you chose X over Y.
 
 ---
-
-✅ With this template, you’ll always have a **default diagram** to start from, and you can adapt it to any prompt (chat app, feed, URL shortener, etc.).
-
----
-
-Would you like me to **walk you through a dry‑run** using this template on a classic interview prompt (e.g., “Design a URL shortener” or “Design Instagram feed”) so you can see how to apply it step by step?
